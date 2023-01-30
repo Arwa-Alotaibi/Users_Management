@@ -20,29 +20,30 @@ public class User {
 
     @NotEmpty(message = "the name should be not null!")
     @Size(min=3 , message = "length more than 4")
- // @Column(columnDefinition = "varchar(4) not null")
+ //  @Column(columnDefinition = "varchar(4) not null")
     private String name ;
-
 
     @NotEmpty(message = "the user name should be not null!")
     @Size(min = 3 , message = "length more than 4")
-   //@Column(columnDefinition = "varchar(4) unique")
+    //@Column(unique=true)
+    // @Column(columnDefinition = "varchar(4) unique")
     private String username;
 
     @NotEmpty(message = "the passowrd Cannot be null" )
-   // @Column(columnDefinition = "varchar(20) not null")
+  //  @Column(columnDefinition = "varchar(20) not null")
     private String passowrd ;
 
 
     @NotEmpty(message = "the email should be not null")
     @Email(message = "the email should be valid email")
- // @Column(columnDefinition = "varchar(20) not null  UNIQUE")
+// @Column(columnDefinition = "varchar(20) not null  unique")
+    //@Column(unique=true)
     private String email;
 
 
     @NotEmpty(message = "the role should be not empty")
     @Pattern(regexp = "user|admin")
-   // @Column(columnDefinition = "varchar(20) not null check (role='user' or role='admin') " )
+    //@Column(columnDefinition = "varchar(20) not null check (role='user' or role='admin') " )
     private String role;
 
     @NotNull(message="age should  be not null")

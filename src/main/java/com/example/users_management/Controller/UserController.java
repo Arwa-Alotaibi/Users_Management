@@ -49,7 +49,7 @@ public class UserController {
 
     }
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity delete(@PathVariable Integer id ,User user){
+    public ResponseEntity delete(@PathVariable Integer id ){
         boolean isdeleted = userService.DeleteUser(id);
         if(isdeleted){
             return ResponseEntity.status(200).body("user deleted" );
