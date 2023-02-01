@@ -77,9 +77,9 @@ public class UserController {
 
     }
 
-    @GetMapping("/check/{email}/{passowrd}")
-    public ResponseEntity check(@PathVariable String email ,@PathVariable String passowrd){
-        User user = userService.checkuser(email,passowrd);
+    @GetMapping("/check/{username}/{passowrd}")
+    public ResponseEntity check(@PathVariable String username ,@PathVariable String passowrd){
+        User user = userService.checkuser(username,passowrd);
         return ResponseEntity.status(200).body("correct" );
 
     }

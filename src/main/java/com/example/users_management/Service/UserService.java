@@ -68,8 +68,8 @@ public class UserService {
         return users;
     }
 
-    public User checkuser(String email , String passowrd){
-        User user = userRepository.findUserByEmailAndPassowrd( email ,  passowrd);
+    public User checkuser(String username , String passowrd){
+        User user = userRepository.check(username ,passowrd);
         if(user==null){
             throw new ApiException("wrong");
         }
